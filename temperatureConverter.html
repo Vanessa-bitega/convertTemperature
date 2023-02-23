@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+     crossorigin="anonymous">
+    <style>
+        body{
+            background: linear-gradient(to right,rgb(17, 16, 16),rgb(124, 187, 8));
+            width: 35rem;
+    /* height: 21rem; */
+    margin: 9em;
+        }
+        .form-group{
+            border: 1px solid;
+            border-radius: 10px;
+            margin-top: 30px;
+            background-color: rgb(111, 224, 149);
+            padding: 4em;
+        }
+        h1{
+            bottom: 1em;
+    position: relative;
+}
+        .btn1{
+            position: relative;
+    top: 3em;
+    
+        }
+
+    .btn2{
+        
+            position: relative;
+    top: 1em;
+    left: 11em;
+
+        
+    }
+        
+    </style>
+</head>
+<body>
+    <form class="form-group">
+    <div id="box" class="well text-center">
+    <h1>Temperature Converter</h1>
+   <label for="userInput" ><h6>Enter Your Number to Convert</h6></label>
+   <input type="number" id="userInput">
+   <p id="bottle"></p>
+ 
+   
+   
+    </div>
+    <div class="btn1">
+<input type="button" value="To celcius" onclick="Tocelcius ()"></div>
+  <!--- <p>You input in celciusis: <span id="outputCelicius" onclick="Tocelcius ()"></span></p>-->
+  <div class="btn2">
+  <input type="button" value="To farheneit" onclick="Tofarheneit ()">
+
+    </div>
+</form>
+</body>  
+    <script>
+        function Tocelcius () {
+            var celcius=(document.getElementById('userInput').value -32)*5/9;
+            celcius=Math.round(celcius);
+            document.getElementById('bottle').innerHTML= 'The Result is '+ celcius;
+        }
+        function Tofarheneit() {
+  var farheneit= document.getElementById('userInput').value*9/5+32;
+          farheneit=Math.round(farheneit);
+  document.getElementById('bottle').innerHTML= 'The Result is '+ farheneit;
+}
+           
+    </script>
+</body>
+</html>
